@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ngh-spinner": {
+      "root": "projects/ngh-spinner",
+      "sourceRoot": "projects/ngh-spinner/src",
+      "projectType": "library",
+      "prefix": "ngh",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngh-spinner/tsconfig.lib.json",
+            "project": "projects/ngh-spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngh-spinner/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngh-spinner/src/test.ts",
+            "tsConfig": "projects/ngh-spinner/tsconfig.spec.json",
+            "karmaConfig": "projects/ngh-spinner/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngh-spinner/tsconfig.lib.json",
+              "projects/ngh-spinner/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngh-spinner-app"

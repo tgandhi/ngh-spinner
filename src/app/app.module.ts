@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {NghSpinnerModule} from '../../projects/ngh-spinner/src/public_api';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,7 +10,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NghSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
