@@ -1,27 +1,68 @@
-# NghSpinnerApp
+# Angular - Loading Spinner
+Package for Loading Spinner - angular Projects,This Library provides HTTP Interceptor, 
+Its listen all the HTTP requests and show the Loading Info. You Can manullay load or hide the spinners also.
+## Installation
+```bash
+$ npm install ngh-spinner --save
+```
+## Usage
+This will Interceptor,So for triggering the Spinner please use `HttpClientModule`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+Import `NghSpinnerModule`,`HttpClientModule` in app.module.ts:
+```typescript
+// Import library module
+import { NghSpinnerModule } from 'ngh-spinner';
+import { HttpClientModule } from '@angular/common/http';
+@NgModule({
+  imports: [
+    // ...
+    HttpClientModule,
+    NghSpinnerModule
+  ]
+})
+```
+Add the service in the component you are going to use
+```typescript
+import { NghSpinnerService } from 'ngh-spinner';
 
-## Development server
+export class AppComponent implements OnInit {
+  constructor(private loader: NghSpinnerService) { }
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  title = 'ngh-spinner-app'; 
+  bgColor ='rgba(0,0,0,0.5)'; // overlay background color
+  color ='#2598db'; // color of spinner
+  type ='square-spin'; // type of spinner
+  ngOnInit(){
+    this.loader.show();
+    setTimeout(() => {
+      this.loader.hide();
+    }, 5000);
+  }
 
-## Code scaffolding
+}
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+In Template Use the directive
+```html
+<ngh-spinner [bgColor]='bgColor'  [color]='color' [type]='type' ></ngh-spinner>
+```
+## Customization
+Propery | Uses |
+--- | --- |
+bgColor | Used to change the background color of overlay div, It uses rgba value, Default value is `rgba(0,0,0,0.5)` |
+color | Any Hex Color value can be used, Default value is `#2598db` |
+type | Spinner Type ,Bellow table updates all spinner type. Default value is `circle-clip` |
 
-## Build
+You can also manually show hide the loader using `show()` and `hide()` methodes in `NghSpinnerService`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Type of Spinner Available
+Spinner Type |
+--- |
+circle-clip |
+square-spin |
+## Building
+```bash
+    ng build --prod ngh-spinner
+```    
+## License
+The MIT License (MIT)
