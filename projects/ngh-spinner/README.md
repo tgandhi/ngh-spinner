@@ -2,7 +2,7 @@
 Package for Loading Spinner for angular Projects
 ## Installation
 ```bash
-$ npm install ngx-spinner --save
+$ npm install ngh-spinner --save
 ```
 ## Usage
 
@@ -13,7 +13,7 @@ import { NghSpinnerModule } from 'ngh-spinner';
 @NgModule({
   imports: [
     // ...
-    NgxSpinnerModule
+    NghSpinnerModule
   ]
 })
 ```
