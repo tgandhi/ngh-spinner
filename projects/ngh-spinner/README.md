@@ -42,3 +42,11 @@ In Template Use the directive
 ```html
 <ngh-spinner [bgColor]='bgColor'  [color]='color' [type]='type' ></ngh-spinner>
 ```
+## Type of Spinner Available
+! Spinner Type |
+--- |
+circle-clip |
+square-spin |
+
+## License
+The MIT License (MIT)
