@@ -1,6 +1,19 @@
 {
   "name": "ngh-spinner",
-  "version": "0.0.1",
+  "description": "Library for Loading Spinner - Angular 4/5/6",
+  "keywords": [
+    "angular",
+    "angular4",
+    "angular5",
+    "angular6",
+    "Spinners",
+    "Loader",
+    "HTTP Loader",
+    "HTTP Spinner"
+  ],
+  "author": "Habid PK",
+  "license": "MIT",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
