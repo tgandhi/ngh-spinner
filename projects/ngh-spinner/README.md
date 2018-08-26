@@ -52,6 +52,9 @@ Propery | Uses |
 bgColor | Used to change the background color of overlay div, It uses rgba value, Default value is `rgba(0,0,0,0.5)` |
 color | Any Hex Color value can be used, Default value is `#2598db` |
 type | Spinner Type ,Bellow table updates all spinner type. Default value is `circle-clip` |
+
+You can also manually show hide the loader using `show()` and `hide()` methodes in `NghSpinnerService`
+
 ## Type of Spinner Available
 Spinner Type |
 --- |
