@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-spinner":"ng build --prod ngh-spinner",
+    "spinner_pack": "cd dist/ngh-spinner && npm pack",
+    "package": "npm run build-spinner && npm run spinner_pack"
   },
   "private": true,
   "dependencies": {

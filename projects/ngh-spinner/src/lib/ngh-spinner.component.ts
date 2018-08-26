@@ -7,8 +7,11 @@ import { NghSpinnerService } from './ngh-spinner.service';
   styleUrls: ['ngh-spinner.component.css']
 })
 export class NghSpinnerComponent implements OnInit  {
-  @Input() bgColor= 'rgba(0,0,0,0.5)';
-  showHide =false;
+  @Input() bgColor= 'rgba(0,0,0,0.5)'; //overlay background color
+  @Input() color= '#2598db'; // spinner color
+  @Input() type= 'circle-clip'; // spinner type
+  showHide =false; // Show or Hide Loader
+
   subscription: Subscription;
   
   constructor(private spinnerService : NghSpinnerService) { 

@@ -1,1 +1,5 @@
-<div class="overlay" [ngStyle]="{'background-color':bgColor}" *ngIf="showHide" ></div>
+<div class="overlay" [ngStyle]="{'background-color':bgColor,'color': color}" *ngIf="showHide" >
+    <div class="loader" [ngClass]="type">
+        <div></div>
+     </div>
+</div>
