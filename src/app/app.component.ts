@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'ngh-spinner-app'; 
   bgColor ='rgba(0,0,0,0.5)'; // overlay background color
   color ='#2598db'; // color of spinner
-  type ='square-spin'; // type of spinner
+  type ='bar-load'; // type of spinner
   ngOnInit(){
 
     // this.postsService.getPost().subscribe( ) ;
